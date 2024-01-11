@@ -31,3 +31,10 @@ resource "aws_vpc" "vpc_network2" {
     Name = "terraform-network"
   }
 }
+
+resource "aws_vpc" "vpc_network3" {
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "terraform-network"
+  }
+}
