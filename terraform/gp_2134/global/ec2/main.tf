@@ -18,6 +18,10 @@ terraform {
 
 
 provider "aws" {
+  assume_role {
+    role_arn     = "arn:aws:iam::893452408139:role/assumable-cicd-role"
+    session_name = "test-assume"
+  }
   region = "us-east-1"  # Replace with your desired AWS region
 }
 
