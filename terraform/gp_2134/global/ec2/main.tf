@@ -18,6 +18,16 @@ terraform {
 
 
 provider "aws" {
+  assume_role {
+    role_arn     = "arn:aws:iam::893452408139:role/assumable-cicd-role"
+    session_name = "test-assume"
+  }
   region = "us-east-1"  # Replace with your desired AWS region
 }
 
+resource "aws_vpc" "vpc_network2" {
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "terraform-network"
+  }
+}
