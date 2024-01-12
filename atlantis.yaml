@@ -1,7 +1,4 @@
 version: 3
-repos:
-- id: /.*/
-  allow_custom_workflows: true
 workflows:
   default:
     plan:
