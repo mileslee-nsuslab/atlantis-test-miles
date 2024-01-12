@@ -1,0 +1,8 @@
+version: 3
+workflows:
+  default:
+    plan:
+      steps:
+      - run: rm -rf .terraform
+      - init:
+          extra_args: [-backend-config="key=test/terraform.tfstate"]
