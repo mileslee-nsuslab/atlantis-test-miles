@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "nsuslab-devops-terraform-state"
-    # key            = "digger/terraform.tfstate"
+    key            = "digger/terraform.tfstate"
     region         = "ap-northeast-2"
     encrypt        = false
     dynamodb_table = "nsuslab-devops-lock-table"
