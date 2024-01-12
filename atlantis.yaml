@@ -5,4 +5,4 @@ workflows:
       steps:
       - run: rm -rf .terraform
       - init:
-          extra_args: [-backend-config="key=/test/terraform.tfstate"]
+          extra_args: [-backend-config="key=test/terraform.tfstate"]
